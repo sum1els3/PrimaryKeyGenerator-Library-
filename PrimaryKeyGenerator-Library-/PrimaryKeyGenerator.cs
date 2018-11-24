@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PrimaryKeyGenerator_Library_
 {
@@ -38,7 +34,7 @@ namespace PrimaryKeyGenerator_Library_
             string custom_primary_key = "";
             for (int key_length = 1; key_length <= Lenght; key_length++)
             {
-                custom_primary_key += key_length % Interval == 0 && key_length != 0 ? "-" : custom_primary_key += GenerateLetterOrNumber(random.Next(1, 4), random);
+                custom_primary_key += key_length % Interval == 0 && key_length != 0 ? "-" : GenerateLetterOrNumber(random.Next(1, 4), random);
             }
             return custom_primary_key;
         }
